@@ -1,0 +1,25 @@
+title: Possible Bradesco Livelo Phishing Email
+
+id: 4a6b3a57-22d1-4c7e-b8f0-123456789001
+
+status: experimental
+
+description: Detects phishing emails containing Bradesco Livelo reward lure
+
+author: James
+
+logsource:
+  product: email
+
+detection:
+  selection:
+    subject|contains:
+      - BRADESCO
+      - LIVELO
+
+  condition: selection
+
+falsepositives:
+  - Legitimate marketing emails
+
+level: medium
